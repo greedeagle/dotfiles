@@ -1,5 +1,4 @@
 
-
 "***************************************
 "表示基本設定
 "***************************************
@@ -64,7 +63,42 @@ endif
 "***************************************
 " キーマッピング設定
 "***************************************
+"========================================================
+"共通マッピング設定======================================
+"========================================================
+"シフト同時押しで行頭・行末に
+noremap <S-h> ^
+noremap <S-l> $
+"挿入モードから抜けるESCで、IME off
+"========================================================
+"NERDTree設定============================================
+"========================================================
 "<c-e>でNERDTreeを切り替え
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+"NERDTreeウィンドウ内で、aでファイル操作ウィンドウを開くようにする
+augroup myvimrc
+    autocmd!
+augroup END
+autocmd myvimrc filetype nerdtree nnoremap <buffer> a m
 
 
+"========================================================
+"Unite設定===============================================
+"========================================================
+" 入力モードで開始する
+let g:unite_enable_start_insert=0
+" バッファ一覧
+noremap <C-U><C-B> :Unite buffer<CR>
+" ファイル一覧
+noremap <C-U><C-F> :UniteWithBufferDir -buffer-name=files file<CR>
+" 最近使ったファイルの一覧
+noremap <C-U><C-R> :Unite file_mru<CR>
+" レジスタ一覧
+noremap <C-U><C-Y> :Unite -buffer-name=register register<CR>
+" ファイルとバッファ
+noremap <C-U><C-U> :Unite buffer file_mru<CR>
+" 全部
+noremap <C-U><C-A> :Unite UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
+" ESCキーを2回押すと終了する
+au FileType unite nnoremap <silent> <buffer> <ESC><ESC> :q<CR>
+au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
