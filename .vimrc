@@ -23,6 +23,10 @@ set backspace=indent,eol,start
 set cursorline
 
 
+"***************************************
+" dein.vim設定
+"***************************************
+
 
 " プラグインが実際にインストールされるディレクトリ
 let s:dein_dir = expand('~/.cache/dein')

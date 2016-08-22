@@ -10,3 +10,8 @@ repo = 'nathanaelkane/vim-indent-guides'
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+[[plugins]]
+repo = 'Shougo/neomru.vim'
