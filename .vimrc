@@ -74,7 +74,8 @@ noremap <S-l> $
 "NERDTree設定============================================
 "========================================================
 "<c-e>でNERDTreeを切り替え
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
+"nnoremap <silent><C-e> :NERDTreeToggle<CR>
+nnoremap <silent><C-e> :NERDTreeTabsToggle<CR>
 "NERDTreeウィンドウ内で、aでファイル操作ウィンドウを開くようにする
 augroup myvimrc
     autocmd!

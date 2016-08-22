@@ -15,3 +15,7 @@ repo = 'scrooloose/nerdtree'
 repo = 'Shougo/unite.vim'
 [[plugins]]
 repo = 'Shougo/neomru.vim'
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+[[plugins]]
+repo = 'jistr/vim-nerdtree-tabs'
