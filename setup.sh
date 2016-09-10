@@ -8,7 +8,7 @@
      ln -s $HOME/dotfiles/$file $HOME/$file
  done
 
-  DOT_DIRS=(".vim" )
+  DOT_DIRS=(".vim", ".atom")
 
  for targetdir in ${DOT_DIRS[@]}
  do

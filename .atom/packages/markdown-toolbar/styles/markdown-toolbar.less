@@ -1,0 +1,114 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+@import "../icons/font-awesome-4.6.3/less/font-awesome.less";
+
+@size-small: 10px;
+@size-medium: 14px;
+@size-big: 20px;
+@extra-width: 10px;
+@extra-font: 2px;
+
+.markdown-toolbar {
+	text-align: right;
+	margin-right: 5px;
+	& ul {
+		list-style-type: none;
+		text-align: center;
+		display: inline-block;
+		padding: 0;
+		margin: 5px;
+		border: 1px solid @background-color-highlight;
+		border-radius: 5px;
+		li {
+			display: inline-block;
+			border-left: 1px solid @background-color-highlight;
+			&:hover {
+				background-color: @background-color-highlight;
+			}
+			span {
+				padding: 5px;
+			}
+		}
+	}
+	&.small {
+		span.fa {
+			line-height: @size-small;
+			font-size: @size-small;
+			width: (@size-small + @extra-width);
+		}
+		ul.dropdown-content {
+			margin-top: (@size-small + @extra-width);
+		}
+		.fa-header2 {
+			font-size: (@size-small - @extra-font) !important;
+		}
+		.fa-header3 {
+			font-size: (@size-small - @extra-font - @extra-font) !important;
+		}
+	}
+	&.medium {
+		span.fa {
+			line-height: @size-medium;
+			font-size: @size-medium;
+			width: (@size-medium + @extra-width);
+		}
+		ul.dropdown-content {
+			margin-top: (@size-medium + @extra-width);
+		}
+		.fa-header2 {
+			font-size: (@size-medium - @extra-font) !important;
+		}
+		.fa-header3 {
+			font-size: (@size-medium - @extra-font - @extra-font) !important;
+		}
+	}
+	&.big {
+		span.fa {
+			line-height: @size-big;
+			font-size: @size-big;
+			width: (@size-big + @extra-width);
+		}
+		ul.dropdown-content {
+			margin-top: (@size-big + @extra-width);
+		}
+		.fa-header2 {
+			font-size: (@size-big - @extra-font) !important;
+		}
+		.fa-header3 {
+			font-size: (@size-big - @extra-font - @extra-font) !important;
+		}
+	}
+	li.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+	ul.dropdown-content {
+		background-color: @app-background-color;
+		z-index: 999;
+		display: none;
+		position: absolute;
+		margin: 0;
+		padding: 0;
+		margin-left: -2px;
+		top: -3px;
+		left: 0;
+		border-radius: 0px 0px 5px 5px;
+		& > li {
+			display: list-item;
+		}
+	}
+	&.bottom ul.dropdown-content {
+		top: -98px;
+		border-radius: 5px 5px 0px 0px;
+	}
+	li.dropdown:hover ul.dropdown-content {
+		display: inline-block;
+	}
+}
+
+.fa-header1:before, .fa-header2:before, .fa-header3:before {
+	content: "\f1dc";
+}

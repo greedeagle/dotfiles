@@ -1,0 +1,7 @@
+"*":
+  core:
+    disabledPackages: [
+      "vim-mode"
+    ]
+  welcome:
+    showOnStartup: false
