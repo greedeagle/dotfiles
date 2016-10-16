@@ -21,6 +21,11 @@ set backspace=indent,eol,start
 "カーソル行表示
 set cursorline
 
+"tabキーにてタブの代わりにスペースを入れる
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set autoindent
 
 "***************************************
 " dein.vim設定
