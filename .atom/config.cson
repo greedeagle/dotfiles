@@ -1,7 +1,10 @@
 "*":
   core:
+    autoHideMenuBar: true
     disabledPackages: [
       "vim-mode"
     ]
+  "exception-reporting":
+    userId: "786144fe-cae6-ceab-8d6c-a1d065db2d6d"
   welcome:
     showOnStartup: false
