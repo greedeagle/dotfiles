@@ -7,6 +7,11 @@
 set number
 "検索文字列強調
 set hlsearch
+"検索色の背景を赤、文字色を白で
+hi Search cterm=NONE ctermfg=white ctermbg=red
+"Visual選択の背景を青、文字色を白
+hi visual cterm=NONE ctermfg=white ctermbg=blue
+
 "検索大文字小文字区分なし
 set ic
 "タブ幅指定
