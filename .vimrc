@@ -126,3 +126,11 @@ au FileType unite inoremap <silent> <buffer> <ESC><ESC> <ESC>:q<CR>
 set laststatus=2
 set t_Co=256
 
+"========================================================
+"シンタックスハイライト設定===============================================
+"========================================================
+syntax on
+set autoindent
+set tabstop=4
+set shiftwidth=4
+set cursorline
